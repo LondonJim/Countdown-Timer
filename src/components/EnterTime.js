@@ -25,7 +25,7 @@ class EnterTime extends Component {
     const timebox =
       <form id="submit-form" onSubmit={this.handleSubmit}>
         <input id="minutes" type="number" value={this.state.minutes} min="0" max="60" name="minutes" onChange={this.handleMinutes} />
-        <input id="seconds" type="number" value={this.state.seconds} min="0" max="60" name="seconds" onChange={this.handleSeconds} />
+        <input id="seconds" type="number" value={this.state.seconds} min="0" max="59" name="seconds" onChange={this.handleSeconds} />
         <button type="submit">Submit</button>
       </form>
 

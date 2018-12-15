@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EnterTime from './components/EnterTime'
+import DisplayTimer from './components/DisplayTimer'
 
 class App extends Component {
   state = {
@@ -15,6 +16,7 @@ class App extends Component {
     return (
       <div className="App">
         <EnterTime addTime={this.addTime}/>
+        <DisplayTimer />
       </div>
     );
   }
