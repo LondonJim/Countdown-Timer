@@ -8,6 +8,10 @@ class App extends Component {
     seconds: 0
   }
 
+  time = () => {
+    return this.state
+  }
+
   addTime = (state) => {
     this.setState(state)
   }
@@ -16,7 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <EnterTime addTime={this.addTime}/>
-        <DisplayTimer />
+        <DisplayTimer time={this.time}/>
       </div>
     );
   }
