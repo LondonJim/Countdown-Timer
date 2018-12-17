@@ -7,8 +7,17 @@ import DisplayTimer from '../src/components/DisplayTimer'
 
 describe("DisplayTimer", () => {
   it("should render statement",() => {
-    const wrapper = shallow(<DisplayTimer />)
+    let mockPropsTime = jest.fn(() => ({ minutes: 1, seconds: 10 }))
+    const wrapper = mount(<DisplayTimer time={mockPropsTime}/>)
 
-    expect(wrapper.contains("DisplayTimer")).toEqual(true)
+    expect(wrapper.contains("DisplayTimer ")).toEqual(true)
   })
+
+  it("should take time and convert to digital MM:SS format", () => {
+    let mockPropsTime = jest.fn(() => ({ minutes: 1, seconds: 10 }))
+    const wrapper = mount(<DisplayTimer time={mockPropsTime}/>)
+
+    expect(wrapper.contains("01:10"))
+  })
+
 })

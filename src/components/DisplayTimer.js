@@ -3,8 +3,7 @@ import React, { Component } from 'react'
 class DisplayTimer extends Component {
 
   twoDigitTime = (digit) => {
-    console.log(digit)
-    return "0" + (digit).toString().slice(-2)
+    return ("0" + (digit).toString()).slice(-2)
   }
 
   render () {
